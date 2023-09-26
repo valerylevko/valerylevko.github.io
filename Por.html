@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="new3.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <div id="HeroSection">
+            <div class="Background">
+            	<div class="logo">Portfolio</div>
+            		<div class="content-wrap">	
+               <nav class='header-menu'>
+				<div class="main-menu">
+					<div id='menuIcons' class="main-menu_icons">
+						<i id='iconOpen' class="fa-solid fa-bars"></i>
+						<i id='iconClose' ></i>
+					</div>
+					<ul id='mainMenu' class="menu-list hide">
+						<li><a href="#HeroSection">Home</a></li>
+						<li><a href="#About">About</a></li>
+						<li><a href="#Skills">Skills</a></li>
+						<li><a href="#Port">Portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+                <div class="text1">
+                  <p><strong>Hi, It’s Théophile Seyrig</strong></p>
+                </div>
+                <div class="text2">
+                  <p><strong>Designer from Porto, Portugal</strong></p>
+                </div>
+                <div class="text3">
+                  <p><strong>Latest works</strong></p>
+                  </div>
+              </div>
+	</div>
+         <div id="About">
+	        <p class="ab"><strong>About</strong></p>
+			<p class="lorem">Lorem ipsum dolor sit amet, Arcu, sed nisi, mi, arcu libero phasellus tincidunt. 
+			Rhoncus, diam penatibus aliquet tellus, in rutrum augue. Pellentesque senectus 
+			risus consectetur et sed purus sed. Consectetur adipiscing elit. Egestas porttitor 
+			nulla nulla egestas odio pharetra egestas aliquet mollis.
+			</p> 
+			<p class="lor">Arcu, sed nisi, mi, arcu
+			libero phasellus tincidunt. Rhoncus, diam penatibus aliquet tellus, in rutrum augue. 
+			Pellentesque senectus risus consectetur et sed purus sed. Consectetur adipiscing elit. 
+			Egestas porttitor nulla nulla egestas odio pharetra egestas aliquet mollis. diam 
+			penatibus aliquet tellus, in rutrum augue. Pellentesque.
+			</p> 
+		</div> 
+		<div id="Skills">
+		    <p class="skill">Skills</p>
+			<p class="ski">
+			<img src="profile.jpg" alt="Théophile Seyrig"/></p>
+			<div class="pro">
+			<p class="profile">Profile</p>
+			<p class="Engineer">UI / UX Engineer, Front-end Developer </p>
+			</div>
+			<div class="fro">
+				<div class="Front">
+			    <p class="fr">Front-end Dev</p>
+				<div class="ProgressBar">
+				    <div class="BarBack"></div>
+					<div class="BarFront"></div>
+				</div>
+				</div>
+				<div class="tol">
+				    <p class="tool">Tools</p>
+					<p class="boot">HTML, CSS, JS, Bootstrap, React</p>
+				</div>
+			</div>
+			<div class="des">
+			    <div class="Design">
+			    	<p class="ds">UI Design</p>
+				<div class="ProgresBar">
+					<div class="BarBac"></div>
+					<div class="BarFron"></div>
+				</div>
+			</div>
+				<div class="tols">
+				    <p class="tools">Tools</p>
+					<p class="adobe">Adobe PS, AI, XD, Figma, InVision</p>
+				</div>
+			</div>
+			<div class="res">
+		    <div class="Research">
+		    	<p class="rs">UX Research</p>
+			<div class="ProgreBar">
+			    <div class="BaBac"></div>
+				<div class="BarFro"></div>
+			</div>
+				</div>
+			<div class="tolse">
+				<p class="toolse">Tools</p>
+				<p class="pen">Paper, Pen, Balsamiq</p>
+		
+		</div>
+		</div>
+	</div>
+		<div id="Port">
+	    <p class="portf">Portfolio</p>
+		<p class="rese">UX Research</p>
+		<p class="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac dictum nibh nam odio cursus id. Diam massa semper a tincidunt cursus ultricies lectus eget urna.</p>
+		<div class="arrow">❮        ❯</div>
+		<div class="images">
+		    <div class="rec1"></div>
+			<div class="rec2"></div>
+			<div class="dom"></div>
+			<div class="rec4"></div>
+		</div>	
+	</div>
+	<div id="contact">
+	    <p class="get">Get in Touch</p>
+		<div class="back">
+		    <button onclick="topFunction()" id="chev" title="Go to top">^</button>
+		</div>
+		<div class="link">
+		    <p class="drib">Dribbble</p>
+			<p class="beh">Behance</p>
+			<p class="cod">Codepen</p>
+			<p class="git">Github</p>
+			<p class="med">Medium</p>
+		</div>
+		<div class="email">
+		    <p class="em">seyrig@mail.com</p>
+			<p class="phone">+55 6645 665544</p>
+		</div>
+		<div class="social">
+		    <p class="li">Linkedin</p>
+			<p class="face">Facebook</p>
+			<p class="inst">Instagram</p>
+			<p class="twit">Twitter</p>
+		</div>
+	</div>
+	    </body>
+	    <script type="text/javascript">
+        window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("chev").style.display = "block";
+    } else {
+        document.getElementById("chev").style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0
+}
+    </script>
+<script src='scripts/script.js'></script>
+</html>

@@ -1,0 +1,950 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#HeroSection{
+	max-width:100%;
+	height: 275px;
+	left: 0px;
+	top: 0px;
+	color: #FFFFFF;
+	text-shadow: 2px 2px 5px black;
+	}
+	.Background{
+	background:linear-gradient(to top, rgba(198, 108, 73, 0.4), rgba(198, 108, 73, 0.4)), url('bg.jpg');
+	background-size: cover;
+	height: 275px;
+	text-align: center;
+	min-width:320px;
+	}
+.content-wrap {
+	max-width: 780px;
+	margin: 0 auto;
+	padding: 0 20px;
+	color: #FFFFFF;
+	text-shadow: 2px 2px 5px black;
+}
+
+.main-menu {
+	position: relative;
+	top: -33px;
+	left: 5px;
+	color: #FFFFFF;
+	text-shadow: 2px 2px 5px black;
+}
+
+.header-menu {
+	display: flex;
+	justify-content: space-between;
+	height: 30px;
+	align-items: center;
+}
+
+.menu-list {
+	list-style: none;
+	position: absolute;
+	top: 28px;
+	right: 30px;
+	left: 0;
+	color: #FFFFFF;
+	text-shadow: 2px 2px 5px black;
+}
+a, a:active, .a:visited{
+    color: #FFFFFF;
+	text-shadow: 2px 2px 5px black;
+	text-decoration:none;
+	
+}
+
+.main-menu i {
+	cursor: pointer;
+}
+
+.hide{
+	display: none;
+}
+#iconClose{
+	display: none;
+}
+
+.logo{
+	padding-top: 36px;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+}
+.text1, .text2, .text3{
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 400;
+}
+.text1{
+	padding-top: 15px;
+	font-size: 20px;
+	line-height: 24px;
+}
+.text2{
+	padding-top: 22px;
+	font-size: 13px;
+	line-height: 16px;
+	}
+.text3{
+	padding-top: 39px;
+	font-size: 13px;
+	line-height: 16px;
+	text-decoration-line: underline;
+	}
+	
+
+	@media(min-width: 1024px){
+		#HeroSection{
+			top: 0px;
+			height: 768px;
+		}
+		.main-menu i {
+		display: none;
+	}
+	.menu-list {
+		position: static;
+		display: flex;
+
+	}
+	.menu-list li:not(:last-child) {
+		margin-right: 50px;
+	}
+	.header-menu {
+		height: 60px;
+	}
+	.content-wrap {
+		position: absolute;
+		width: 529px;
+		height: 22px;
+		right: 161px;
+		top: 105px;
+		font-family: 'Libre Franklin';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+		.Background{
+			height: 768px;
+			background-size: cover;
+		}
+		.logo{
+			width: 116px;
+			height: 29px;
+			padding-left: 161px;
+			padding-top: 93px;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+		}
+		.text1{
+			width: 1000px;
+			height: 78px;
+			padding-left: 161px;
+			padding-top: 230px;
+			font-size: 64px;
+			line-height: 78px;
+			display: flex;
+			align-items: center;
+		}
+		.text2{
+			width: 500px;
+			height: 29px;
+			padding-left: 151px;
+			padding-top: 70px;
+			font-size: 24px;
+			line-height: 29px;
+		}
+		.text3{
+			position: absolute;
+			width: 110px;
+			height: 22px;
+			left: 161px;
+			top: 500px;
+			font-size: 18px;
+			line-height: 22px;
+			text-decoration-line: underline;
+		}
+	}
+	#About{
+	max-width:100%;
+	height: 335px;
+	left: 0px;
+	top: 275px;
+	background:  #FFFFFF;
+	}
+.lorem, .lor, .ab{
+	width: 100%;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	color: black;
+	}
+.lorem{
+	text-align: justify;
+	font-weight: 400;
+	font-size: 12px;
+	padding-top: 30px;
+	padding-left: 34px;
+	padding-right: 34px;
+	}
+.lor{
+	padding-top:20px;
+	text-align: justify;
+	font-weight: 400;
+	font-size: 12px;
+	padding-left: 34px;
+	padding-right: 34px;
+	}
+.ab{
+	padding-top:30px;
+	text-align: center;
+	font-weight: 900;
+	font-size: 25px;
+	}
+@media(min-width: 1024px){
+		#About{
+			height: 544px;
+			left: 0px;
+			top: 768px;
+		}
+		.ab{
+			width: 73px;
+			height: 29px;
+			padding-left: 161px;
+			padding-top: 93px;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+		}
+		.lorem, .lor{
+			height: 231px;
+			padding-left: 161px;
+			padding-right: 161px;
+			font-size: 18px;
+			line-height: 30px;
+		}
+		.lorem{
+			padding-top: 93px;
+		}
+		.lor{
+			padding-top: 3px;
+		}
+	}
+	#Skills{
+	max-width:100%;
+	height: 617px;
+	left: 0px;
+	top: 568px;
+	background: #FFFAF2;
+	}	
+.skill{
+	width: 100%;
+	padding-top:30px;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 900;
+	font-size: 25px;
+	line-height: 25px;
+	color: black;
+	text-align: center;
+	}
+	.ski{
+	text-align:center;
+	}
+img{
+	height: 218px;
+	text-align: center;
+	padding-top: 30px;
+	}
+.pro{
+	display:flex;
+	justify-content:center;
+	height: 25px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 25px;
+	color: black;
+	}
+.profile{
+	position: relative;
+	right: 20px;
+}
+.Engineer{
+	font-weight: 400;
+	position: relative;
+	left:30px;
+	}
+	.fro{
+	height: 30px;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 25px;
+	}
+.tol{
+	display:flex;
+	justify-content:center;
+	height: 25px;
+	padding-top: 10px;
+	color: black;
+	margin-right:20px ;
+	}         
+	.Front{
+	display: flex;
+	justify-content:center;
+	padding-top: 30px;
+	}
+	.fr{
+		position: relative;
+		right: 10px;
+	}
+	.ProgressBar{
+		padding-left: 5px;
+		position: relative;
+		right: 5px;
+	}
+	.BarBack{
+	width: 171px;
+	height: 18px;
+	background: #F5D6AB;
+	z-index: 1;
+	}
+.BarFront{
+	width: 95.3px;
+	height: 18px;
+	margin-top: -18px;
+	background: #C66C49;
+	z-index: 2;
+	}
+.tool{
+	width: 31px;
+	height: 25px;
+	position: relative;
+	right: 30px;
+	}
+.boot{
+	height: 25px;
+	position: relative;
+	left: 30px;
+	}
+	.des{
+	height: 30px;
+	margin-top: 50px;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 25px;
+	}
+.tols{
+	display:flex;
+	justify-content:center;
+	height: 25px;
+	padding-top: 10px;
+	color: black;
+	margin-right:20px ;
+	}         
+	.Design{
+	display: flex;
+	justify-content:center;
+	padding-top: 30px;
+	}
+	.ds{
+		position: relative;
+		right: 20px;
+	}
+	.ProgresBar{
+		padding-left: 15px;
+	}
+	.BarBac{
+	width: 171px;
+	height: 18px;
+	background: #F5D6AB;
+	z-index: 1;
+	}
+.BarFron{
+	width: 95.3px;
+	height: 18px;
+	margin-top: -18px;
+	background: #C66C49;
+	z-index: 2;
+	}
+.tools{
+	width: 31px;
+	height: 25px;
+	position: relative;
+	right: 25px;
+	}
+.adobe{
+	height: 25px;
+	position: relative;
+	left: 30px;
+	}
+.res{
+	height: 30px;
+	margin-top: 50px;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 25px;
+	}
+	.rs{
+		position: relative;
+		right: 18px;}
+.tolse{
+	display:flex;
+	justify-content:center;
+	height: 25px;
+	padding-top: 10px;
+	color: black;
+	margin-right:20px ;
+	}         
+	.Research{
+	display: flex;
+	justify-content:center;
+	padding-top: 30px;
+	}
+	.BaBac{
+	width: 171px;
+	height: 18px;
+	background: #F5D6AB;
+	z-index: 1;
+	}
+.BarFro{
+	width: 95.3px;
+	height: 18px;
+	margin-top: -18px;
+	background: #C66C49;
+	z-index: 2;
+	}
+.toolse{
+	width: 31px;
+	height: 25px;
+	position: relative;
+	right: 60px;
+	}
+.pen{
+	height: 25px;
+	}
+.boot, .adobe, .pen{
+font-weight: 400;
+}
+
+@media(min-width: 1024px){
+	#Skills{
+			height: 693px;
+			left: 0px;
+			top: 1312px;
+	}
+	.skill{
+	        width: 73px;
+			height: 29px;
+			padding-left: 161px;
+			padding-top: 93px;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+	}
+	img{
+	width: 310px;
+	height: 310px;
+	position: absolute;
+	left: 161px;
+	top: 1510px;
+	}
+	.profile, .Front, .tool, .Design, .tools, .Research, .toolse{
+	height: 25px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 25px;
+	}
+	.profile{
+	margin-left: 470px;
+	margin-top: 133px;
+	}
+	.Engineer{
+	height: 25px;
+	padding-left: 50px;
+	padding-top: 133px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 25px;
+	}
+	.boot, .adobe, .pen{
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	}
+	.fro, .des, .res{
+	margin-left:480px;
+	}
+	.fro{
+	padding-top: 140px;
+	}
+	.Front{
+		padding-left: 30px;
+	}
+	.ProgressBar, .ProgresBar, .ProgreBar{
+	height: 24px;
+	}
+	.ProgressBar, .ProgresBar, 
+	.ProgreBar, .boot, .adobe{
+	padding-left: 30px;
+	}
+	.ProgresBar{
+		position: relative;
+		left:20px;
+	}
+	.BarBack, .BaBac, .BarBac{
+		width: 306px;
+		height: 24px;
+	}
+	.BarFron{
+		width: 211px;
+		height: 24px;
+		position: relative;
+		top: -6px;
+	}
+	.BarFront{
+		width: 241px;
+		height: 24px;
+		position: relative;
+		top: -6px;
+	}
+	.BarFro{
+		width: 146px;
+		height: 24px;
+		position: relative;
+		top: -6px;
+	}
+	.tool, .tools, .toolse, .boot, .adobe, .pen{
+		padding-top: 20px;	}
+	.tool, .tools, .toolse{
+		position: relative;
+		right:55px;
+	}
+	.des{
+	padding-top: 30px;
+	padding-left: 20px;
+	}
+	.res{
+	padding-top: 30px;
+	padding-left: 30px;
+	}
+	.Research{
+		position: relative;
+		left: 5px;
+	}
+	.toolse{
+		position: relative;
+		right: 125px;
+	}
+	.pen{
+		position: relative;
+		right: 10px;
+	}
+	}
+	#Port{
+	width: 100%;
+	height: 404px;
+	left: 0px;
+	top: 1185px;
+	background: #FFFFFF;
+	}
+.portf{
+	width: 100%;
+	padding-top: 30px;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+	color: black;
+	text-align: center;
+	}
+.rese{
+	width: 100%;
+	padding-top: 20px;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 25px;
+	color: black;
+	text-align: center;
+	}
+.ipsum{
+	width: 100%;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top: 15px;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	color: black;
+	text-align: justify;
+	}
+.images{
+	width: 308px;
+	height: 195.47px;
+	padding-top: 20px;
+    margin-left:auto;
+    margin-right:auto ;
+	}
+.rec1{
+	width: 169.76px;
+	height: 71.70px;
+	background: url(rec2.jpg);
+	background-size: cover;
+	}
+.rec2{
+	width: 121.69px;
+	height: 67.85px;
+	margin-left: 185.31px;
+	margin-top:130px;
+	position: relative;
+	bottom: 70px;
+	background: url(rec1.jpg), #C66C49;
+	background-size: cover;
+	}
+	
+.dom{
+	width: 122.07px;
+	height: 116.89px;
+	margin-left: 185.31px;
+	margin-top:-271px;
+	background: url(dom.jpg);
+	background-size: cover;
+	}
+.rec4{
+	width: 113.01px;
+	height: 169.28px;
+	margin-left: 28px;
+	margin-top:-58px;
+	background: url(rec.jpg), #8B4136;
+	transform: rotate(-90deg);
+	background-size: cover;
+	}
+	.arrow{
+		display: none;
+	}
+	@media(min-width: 1024px){
+		#Port{
+			height: 822px;
+			left: 0px;
+			top: 2005px;
+
+		}
+		.portf{
+			height: 29px;
+			padding-left: 161px;
+			padding-top: 93px;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+			text-align: left;
+		}
+		.rese{
+			height: 25px;
+			padding-left: 161px;
+			padding-top: 93px;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 25px;
+			text-align:left ;
+		}
+		.ipsum{
+			width: 650px;
+			height: 137px;
+			padding-left: 168px;
+			padding-top: 75px;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 30px;
+			text-align: left;
+		}
+		.images{
+			height: 403px;
+			padding-left: 130px;
+			position: relative;
+			top: -70px;
+		}
+		.rec1{
+			width: 230px;
+			height: 122px;
+			bottom: 50px;
+
+		}
+		.rec2{
+			width: 185px;
+			height: 100px;
+			position: absolute;
+			right: -258px;
+			top: 70px;
+		}
+		.dom{
+			width: 185px;
+			height: 161px;
+			margin-top: -123px;
+			margin-left: 250px;
+		}
+		.rec4{
+			width: 135px;
+			height: 228px;
+			margin-left: 48px;
+			margin-top: -62px;
+		}
+		.arrow{
+			position: absolute;
+			display: flex;
+			font-size: 30px;
+			left: 191px;
+			top: 2558px;
+			color: black;
+		}
+	}
+	#contact{
+		max-width: 100%;
+		height: 360px;
+		top: 1788px;
+		background:#FFFAF2;
+		font-family: 'Libre Franklin';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+	}
+.get{
+	width: 100%;
+	padding-top:30px;
+	text-align:center;
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+	color: black;
+	}
+.back{
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 40px;
+	padding-top:235px;
+	}
+#chev{
+	width: 24px;
+	height: 24px;
+	font-family: 'Segoe MDL2 Assets';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 24px;
+	color: black;
+	display: none;
+	border: none; 
+    outline: none;
+    background-color: #FFFAF2;
+	}
+.link{
+	width: 61px;
+	height: 161px;
+	padding-left: 41px;
+	padding-top: 30px;
+	color: black;
+	}
+.drib{
+	width: 56px;
+	height: 17px;
+	}
+.beh{
+	width: 58px;
+	height: 17px;
+	padding-top: 15px;
+	}
+.cod{
+	width: 61px;
+	height: 17px;
+	padding-top: 30px;
+	}
+.git{
+	width: 46px;
+	height: 17px;
+	padding-top: 30px;
+	}
+.med{
+	width: 54px;
+	height: 17px;
+	padding-top: 30px;
+	}
+.email{
+	width: 131px;
+	height: 39px;
+	padding-left: 41px;
+	padding-top: 50px;
+	color: black;
+	}
+	.em{
+	width: 131px;
+	height: 17px;
+	}
+.phone{
+	width: 109px;
+	height: 15px;
+	padding-top: 15px;
+	font-size: 12px;
+	line-height: 15px;
+	}
+.social{
+	width: 67px;
+	height: 125px;
+	padding-left: 55%;
+	padding-bottom: 30px;
+	color: black;
+	}
+.li{
+	width: 57px;
+	height: 17px;
+	position: relative;
+	top: -182px;
+	}
+.face{
+	width: 64px;
+	height: 17px;
+	position: relative;
+	top: -167px;
+	}
+.inst{
+	width: 67px;
+	height: 17px;
+	position: relative;
+	top: -151px;
+	}
+.twit{
+	width: 47px;
+	height: 17px;
+	position: relative;
+	top: -135px;
+	}
+	@media(min-width: 1024px){
+		#contact{
+			height: 528px;
+			left: 0px;
+			top: 2827px;
+			font-family: 'Libre Franklin';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 22px;
+		}
+		.get{
+			height: 29px;
+			padding-left: 161px;
+			padding-top: 93px;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+			text-align: left;
+		}
+		.back{
+			width: 24px;
+			height: 24px;
+			left: 85%;
+			top: 3027px;
+		}
+		#chev{
+			font-weight: 400;
+			font-size: 60px;
+			line-height: 24px;
+		}
+		.link{
+			width: 78px;
+			height: 166px;
+			padding-left: 167px;
+			padding-top: 90px;
+		}
+		.social{
+			width: 86px;
+			height: 130px;
+			padding-left: 50%;
+			position: relative;
+		}
+		.email{
+			width: 168px;
+			height: 54px;
+			padding-left: 80%;
+			position: relative;
+			bottom: 130px;
+		}
+		.em{
+			width: 168px;
+			height: 22px;
+			font-size: 18px;
+			line-height: 22px;
+		}
+		.phone{
+			width: 136px;
+			height: 18px;
+			top: 36px;
+		}
+		.drib{
+			width: 72px;
+			height: 22px;
+		}
+		.beh{
+			width: 75px;
+			height: 22px;
+			top: 72px;
+		}
+		.cod{
+			width: 78px;
+			height: 22px;
+			top: 102px;
+		}
+		.git{
+			width: 60px;
+			height: 22px;
+			margin-top: 10px;
+		}
+		.med{
+			width: 69px;
+			height: 22px;
+			margin-top: 10px;
+		}
+		.li{
+			width: 73px;
+			height: 22px;
+			top: -130px;
+		}
+		.face{
+			width: 82px;
+			height: 22px;
+			top: -115px;
+		}
+		.inst{
+			width: 86px;
+			height: 22px;
+			top: -100px;
+		}
+		.twit{
+			width: 60px;
+			height: 22px;
+			top: -85px;
+		}
+	}
