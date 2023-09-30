@@ -1,0 +1,17 @@
+<HTML>
+<HEAD>
+<TITLE>Hello from JavaScript!</TITLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<p id="hi"></p>
+<script language="JavaScript">
+ let text = "Hello";
+  if (confirm(text) == true) {
+    text = "Hello, world!";
+  } else {
+    text = " ";
+  }
+  document.getElementById("hi").innerHTML = text;
+</script>
+</BODY>
+</HTML>
