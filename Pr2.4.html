@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr2.4</title>
+    <style type="text/css">
+      body, button {
+    text-align: center;
+    background-color: black;
+    font-size: 30px;
+    color: cyan;
+    position: relative;
+}
+</style>
+</head>
+<body>
+    <h1>Гра на удачу</h1>
+    <p>Введіть вашу ставку:</p>
+    <input type="number" id="user" placeholder="Ваша ставка">
+    <button onclick="Game()">Грати</button>
+    <p id="result"></p>
+    <script>
+        function Game() {
+            const user = parseFloat(document.getElementById('user').value);
+            const random = Math.floor(Math.random() * 11) - 5;
+            setTimeout(function() {
+                if (random <= 0) {
+                    document.getElementById('result').textContent = 'Ви не вгадали зі своєю ставкою.';
+                } else {
+                    const winnings = user * random;
+                    document.getElementById('result').textContent = 'Ви виграли ' + winnings + ' гривень!';
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
