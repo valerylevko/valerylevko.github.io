@@ -1,0 +1,17 @@
+<HEAD>
+<TITLE>Lr2.3</TITLE>
+</HEAD>
+<script language="JavaScript">
+alert('Завдання №3');
+function getLastDayOfMonth(year, month) {
+    const nextMonth = new Date(year, month + 1, 1);
+    const lastDay = new Date(nextMonth - 1);
+    return lastDay.getDate();
+}
+const year = 2023;
+const month = 5;
+const lastDay = getLastDayOfMonth(year, month);
+alert(`Останній день місяця: ${lastDay}`);
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,18 @@
+<HEAD>
+<TITLE>Lr2.4</TITLE>
+</HEAD>
+<script language="JavaScript">
+alert('Завдання №4');
+function getSecondsToTomorrow() {
+    const now = new Date();
+    const tomorrow = new Date(now);
+    tomorrow.setDate(now.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+    const timeDiff = tomorrow - now;
+    return Math.floor(timeDiff / 1000);
+}
+const secondsToTomorrow = getSecondsToTomorrow();
+alert(`Залишилося секунд до завтра: ${secondsToTomorrow} секунд`);
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,15 @@
+<HEAD>
+<TITLE>Lr2.2</TITLE>
+</HEAD>
+<script language="JavaScript">
+alert('Завдання №2');
+function getWeekDay(date) {
+    const daysOfWeek = ['НД', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+    return daysOfWeek[date.getDay()];
+}
+const today = new Date();
+const dayOfWeek = getWeekDay(today);
+alert(`Сьогодні - ${dayOfWeek}`);
+</script>
+</BODY>
+</HTML>
