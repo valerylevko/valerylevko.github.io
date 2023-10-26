@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Перевірка таблиці множення</title>
+</head>
+<body>
+    <p>Загальний рахунок: <span id="score">0</span></p>
+    <button id="next">Наступне завдання</button>
+    <p id="question">Завдання:</p>
+    <input type="text" id="answer" placeholder="Ваша відповідь">
+    <button id="check">Перевірити</button>
+    <p id="result"></p>
+    <script>
+        const scoreDisplay = document.getElementById("score");
+        const nextButton = document.getElementById("next");
+        const questionDisplay = document.getElementById("question");
+        const answerInput = document.getElementById("answer");
+        const checkButton = document.getElementById("check");
+        const resultDisplay = document.getElementById("result");
+        let score = 0;
+        let currentQuestion = generateQuestion();
+        nextButton.addEventListener("click", () => {
+            answerInput.value = "";
+            currentQuestion = generateQuestion();
+            questionDisplay.textContent = `Завдання: ${currentQuestion.question}`;
+            resultDisplay.textContent = "";
+        });
+        checkButton.addEventListener("click", () => {
+            const userAnswer = parseInt(answerInput.value, 10);
+            if (userAnswer === currentQuestion.answer) {
+                score++;
+                resultDisplay.textContent = "Правильно";
+            } else {
+                resultDisplay.textContent = "Помилка";
+            }
+            scoreDisplay.textContent = score;
+        });
+        function generateQuestion() {
+            const num1 = Math.floor(Math.random() * 10) + 1;
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            return {
+                question: `${num1} x ${num2} = `,
+                answer: num1 * num2,
+            };
+        }
+        currentQuestion = generateQuestion();
+        questionDisplay.textContent = `Завдання: ${currentQuestion.question}`;
+    </script>
+</body>
+</html>
