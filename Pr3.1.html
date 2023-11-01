@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .message {
+      border: 1px solid lime;
+      padding: 10px;
+      margin: 10px;
+    }
+    *{
+      background-color: PaleGreen;
+    }
+    button{
+      border: none;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <h3>Android</h3>
+    <p>Android - (вимов. Андроїд) операційна система і платформа для мобільних телефонів та планшетних комп'ютерів, створена компанією Goole на базі ядра Linux. Підтримуєтся альянсом Open Handest Alliance (OHA).</p>
+    <button class="hide-button">[ X ]</button>
+  </div>
+  <div class="message">
+    <h3>Mac OS</h3>
+    <p>Mac OS, від Macintosh Operating System(Мак ОСб Операційна Система Макінтош), є першою коменрційною графічною операційною системоюб створеною компанією Apple Computer. Перша версія Mac OS вийшла у 1984 році разом з першим комп'ютером Macintosh</p>
+    <button class="hide-button">[ X ]</button>
+  </div>
+   <div class="message">
+    <h3>Windows Phone</h3>
+    <p>Mobile Phone (кодова назва "Photon") - велике оновлення Windows Mobile, що вийшло 11 жовтня 2010 рокую Дана система є повністю новою, з повністю новим інтерфейсомі - вперше - з інтеграцією сервісів Microsoft Xbox Live і Zune. Презентація системи відбулася в рамках заходу Mobile world Congress, що проходить у Барселоні.</p>
+    <button class="hide-button">[ X ]</button>
+  </div>
+
+  <script>
+    const hideButtons = document.querySelectorAll('.hide-button');
+
+    hideButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const message = button.parentNode;
+        message.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
