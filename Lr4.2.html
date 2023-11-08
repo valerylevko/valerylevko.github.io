@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lr4.2</title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+#block{
+    width:100px;
+    height: 100px;
+    background: green;
+    border-radius: 0; 
+}
+</style>
+<body>
+<label for="rtl">Верхній лівий кут:</label>
+    <input type="range" id="rtl" min="0" max="100">
+    <span id="ttl">0px</span><br>
+
+    <label for="rtr">Верхній правий кут:</label>
+    <input type="range" id="rtr" min="0" max="100">
+    <span id="ttr">0px</span><br>
+
+    <label for="rbr">Нижній правий кут:</label>
+    <input type="range" id="rbr" min="0" max="100">
+    <span id="tbr">0px</span><br>
+
+    <label for="rbl">Нижній лівий кут:</label>
+    <input type="range" id="rbl" min="0" max="100">
+    <span id="tbl">0px</span>
+<div id="block">
+</div>
+<p>Code: <code id="cssCode"></code></p>
+  <script>
+       const block = document.getElementById('block');
+    const rtl = document.getElementById('rtl');
+    const rtr = document.getElementById('rtr');
+    const rbr = document.getElementById('rbr');
+    const rbl = document.getElementById('rbl');
+    const ttl = document.getElementById('ttl');
+    const ttr = document.getElementById('ttr');
+    const tbr = document.getElementById('tbr');
+    const tbl = document.getElementById('tbl');
+    const cssCode = document.getElementById('cssCode');
+
+    rtl.addEventListener('input', updateBorderRadius);
+    rtr.addEventListener('input', updateBorderRadius);
+    rbr.addEventListener('input', updateBorderRadius);
+    rbl.addEventListener('input', updateBorderRadius);
+
+    function updateBorderRadius() {
+      const tl = rtl.value;
+      const tr = rtr.value;
+      const br = rbr.value;
+      const bl = rbl.value;
+
+      block.style.borderRadius = `${tl}px ${tr}px ${br}px ${bl}px`;
+      ttl.textContent = `${tl}px`;
+      ttr.textContent = `${tr}px`;
+      tbr.textContent = `${br}px`;
+      tbl.textContent = `${bl}px`;
+
+      cssCode.textContent = `border-radius: ${tl}px ${tr}px ${br}px ${bl}px;`;
+    }
+    </script>
+</body>
+</html>
