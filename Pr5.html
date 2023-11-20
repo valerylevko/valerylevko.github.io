@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+h1{
+  text-align: center;
+}
+input{
+  padding-bottom: 1px;
+  margin-left: 43%;
+  margin-right: 43%;
+  font-size: 21px;
+
+}
+div{
+  border: 1px solid black;
+  font-size: 21px;
+}
+
+    #taskList {
+      list-style-type: none;
+      padding: 0;
+      border: 1px solid black;
+    }
+
+    .task {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border:1px solid идфсл;
+      padding: 10px;
+    }
+
+    .task label {
+      cursor: pointer;
+      width: 1000px;
+    }
+
+    .task input[type="checkbox"] {
+      margin-right: 1px;
+    }
+
+    .task.completed {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    .delete {
+      cursor: pointer;
+      color: red;
+    }
+
+    .editInput {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<h1>ToDo List</h1>
+  <div>
+    <input type="text" id="newTaskInput" placeholder="Add a new task and press Enter">
+  <ul id="taskList"></ul>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const taskList = document.getElementById("taskList");
+      const newTaskInput = document.getElementById("newTaskInput");
+
+      function saveTasks() {
+        localStorage.setItem("tasks", JSON.stringify(Array.from(taskList.children)));
+      }
+
+      function loadTasks() {
+        const savedTasks = localStorage.getItem("tasks");
+        if (savedTasks) {
+          taskList.innerHTML = savedTasks;
+          addTaskEventListeners();
+        }
+      }
+
+      function addTask() {
+        if (newTaskInput.value.trim() !== "") {
+          const taskItem = document.createElement("li");
+          taskItem.classList.add("task");
+          taskItem.innerHTML = `
+            <label>
+              <input type="checkbox">
+              <span>${newTaskInput.value}</span>
+            </label>
+            <span class="delete">&#10006;</span>
+          `;
+          taskList.appendChild(taskItem);
+          newTaskInput.value = "";
+          saveTasks();
+          addTaskEventListeners();
+        }
+      }
+
+      function deleteTask(event) {
+        if (event.target.classList.contains("delete")) {
+          event.target.parentNode.remove();
+          saveTasks();
+        }
+      }
+
+      function toggleTaskStatus(event) {
+        if (event.target.type === "checkbox") {
+          const taskItem = event.target.closest(".task");
+          taskItem.classList.toggle("completed", event.target.checked);
+          saveTasks();
+        }
+      }
+
+      function editTask(event) {
+        if (event.target.tagName === "SPAN") {
+          const taskItem = event.target.closest(".task");
+          const taskText = taskItem.querySelector("span");
+          const editInput = document.createElement("input");
+          editInput.type = "text";
+          editInput.value = taskText.innerText;
+          editInput.classList.add("editInput");
+          taskItem.replaceChild(editInput, taskText);
+          editInput.addEventListener("blur", saveEditedTask);
+          editInput.focus();
+        }
+      }
+
+      function saveEditedTask(event) {
+        const editedText = event.target.value;
+        const taskItem = event.target.closest(".task");
+        const span = document.createElement("span");
+        span.innerText = editedText;
+        taskItem.replaceChild(span, event.target);
+        saveTasks();
+      }
+
+      function addTaskEventListeners() {
+        const deleteButtons = document.querySelectorAll(".delete");
+        const checkboxes = document.querySelectorAll(".task input[type='checkbox']");
+        const taskTexts = document.querySelectorAll(".task span:not(.editInput)");
+
+        deleteButtons.forEach(button => button.addEventListener("click", deleteTask));
+        checkboxes.forEach(checkbox => checkbox.addEventListener("change", toggleTaskStatus));
+        taskTexts.forEach(text => text.addEventListener("dblclick", editTask));
+      }
+
+      newTaskInput.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+          addTask();
+        }
+      });
+
+      loadTasks();
+      addTaskEventListeners();
+    });
+  </script>
+
+</body>
+</html>
