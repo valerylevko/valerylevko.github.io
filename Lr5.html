@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список Товарів</title>
+  <style>
+    .cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.cart-icon img {
+  width: 30px;
+  margin-right: 20px;
+}
+
+#cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 35%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+   .main{
+  text-align:center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.wrap{
+  width: 1300px;
+  height:420px;
+  margin:50px auto;
+  border:2px solid grey;
+  position: relative;
+  z-index: 2;
+}
+.swipe{
+  position: absolute;
+  top: 70px;
+  width: 40px;
+  height: 40px;
+  border:2px solid grey;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  background-color: #fff;
+}
+.c1, .c2, .c3{
+  text-align: center;
+  left: -2px;
+  font-size: 1.5rem;
+  float:left;
+  width: 323px;
+  height: 70px;
+  line-height: 60px;
+  color: grey;
+  border-bottom:1px solid grey;
+  border-right: 1px solid grey;
+}
+.c4{
+  text-align: center;
+  left: -2px;
+  font-size: 1.5rem;
+  float:left;
+  width: 323px;
+  height: 70px;
+  line-height: 60px;
+  color: grey;
+  border-bottom:1px solid grey;
+}
+.product-item1, .product-item2,
+.product-item3{
+  font-size: 16px;
+  font-family: Oswald;
+  float: left;
+  width: 323px;
+  border-right:1px solid grey;
+}
+.product-item4 {
+  font-size: 16px;
+  font-family: Oswald;
+  float: left;
+  width: 323px;
+}
+.product-item1 img, .product-item2 img, 
+.product-item4 img   {
+  margin-left: auto;
+    margin-right: auto;
+   display: block;
+   width: 75%;
+}
+.product-item3 img {
+  margin-left: auto;
+    margin-right: auto;
+   display: block;
+   width: 93%;
+}
+.product-list1, .product-list2,
+.product-list3, .product-list4 {
+   background: #fafafa;
+   padding: 15px 0;
+   text-align: center;
+}
+.product-list1 h3, .product-list2 h3,
+.product-list3 h3, .product-list4 h3  {
+   font-weight: 400;
+   color: #444444;
+   margin: 0 0 10px 0;
+}
+.price1, .price2, .price3, .price4 {
+   font-size: 17px;
+   color: indigo;
+   display: block;
+   margin-bottom: 12px;
+}
+#button1, #button3, #button4{
+   text-decoration: none;
+   display: inline-block;
+   padding: 0 12px;
+   background: green;
+   color: white;
+   text-transform: uppercase;
+   font-size: 12px;
+   line-height: 28px;
+   transition: .3s ease-in;
+}
+#button2 {
+   text-decoration: none;
+   display: inline-block;
+   padding: 0 12px;
+   background: orange;
+   color: white;
+   text-transform: uppercase;
+   font-size: 12px;
+   line-height: 28px;
+   transition: .3s ease-in;
+}
+  </style>
+</head>
+<body>
+
+  <div class="cart-icon" onclick="openCartModal()">
+    <img src="263142.png" alt="Cart Icon">
+    <span id="cart-count">0</span>
+  </div>
+
+  <div id="modal">
+    <div id="modal-content"></div>
+  </div>
+ <div class="main"> Обов'язково додайте своє замовлення</div>
+ <div class="wrap">
+      <div class="c1"><a href="https://hard.rozetka.com.ua/monitors/c80089/preset=game/">Геймерські</a></div>
+      <div class="c2"><a href="https://hard.rozetka.com.ua/monitors/c80089/preset=dlya-biznesa/">Для бізнесу</a></div>
+      <div class="c3"><a href="https://hard.rozetka.com.ua/monitors/c80089/preset=portativnye/">Портативні</a></div>
+      <div class="c4"><a href="https://hard.rozetka.com.ua/monitors/c80089/preset=professionaljnye-paneli/">Професіональні панелі</a></div>
+      <div class="product-item1">
+        <div class="product-list1">
+          <img src="73891904.jpg">
+          <h3>Монітор 27" Dell S2721DGFA (210-AXRQ)</h3>
+          <span class="price1">16 999 грн</span>
+              <button id="button1" onclick="addToCart()">В корзину</button>
+  </div>
+</div>
+<div class="product-item2">
+        <div class="product-list2">
+          <img src="314903087.jpg">
+          <h3>Монітор 27" Samsung S8 S27A800U (LS27A800UNIXCI) 4K IPS</h3>
+          <span class="price2"><s>14 449</s></span>
+              <button id="button2">Немає на складі</button>
+  </div>
+</div>
+<div class="product-item3">
+        <div class="product-list3">
+          <img src="228398124.jpg">
+          <h3>Монітор 14" Lenovo ThinkVision M14t (62A3UAT1WL)</h3>
+          <span class="price3">15 355</span>
+              <button id="button3" onclick="addToCart()">В корзину</button>
+  </div>
+</div>
+<div class="product-item4">
+        <div class="product-list4">
+          <img src="221125917.jpg">
+          <h3>Монітор  27" LG 27UP650-W Gray/Black</h3>
+          <span class="price4"><s>16 999</s> 15 599</span>
+          <button id="button4" onclick="addToCart()">В корзину</button>
+  </div>
+</div>
+    </div>
+
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCartModal()">&times;</span>
+      <p id="cart-empty-msg">Корзина пуста</p>
+      <div id="cart-items"></div>
+      <button onclick="goToCart()">Перейти у корзину</button>
+      <button onclick="closeCartModal()">Повернутись до покупок</button>
+    </div>
+  </div>
+  <script>
+    let cartCount = 0;
+
+function addToCart() {
+  openQuantityModal();
+}
+
+function openQuantityModal() {
+  const quantityModal = prompt("Вкажіть кількість товару:");
+  if (quantityModal !== null) {
+    cartCount += parseInt(quantityModal, 10);
+    updateCartCount();
+    alert("Товар додано!");
+  }
+}
+
+function openCartModal() {
+  const cartModal = document.getElementById("cart-modal");
+  const cartEmptyMsg = document.getElementById("cart-empty-msg");
+  const cartItems = document.getElementById("cart-items");
+
+  if (cartCount === 0) {
+    cartEmptyMsg.style.display = "block";
+    cartItems.innerHTML = "";
+  } else {
+    cartEmptyMsg.style.display = "none";
+    cartItems.innerHTML = `<p>Кількість товарів: ${cartCount}</p>`;
+  }
+
+  cartModal.style.display = "block";
+}
+
+function closeCartModal() {
+  const cartModal = document.getElementById("cart-modal");
+  cartModal.style.display = "none";
+}
+
+function goToCart() {
+  alert("Перехід на сторінку корзини!");
+}
+
+function updateCartCount() {
+  const cartCountElement = document.getElementById("cart-count");
+  cartCountElement.innerText = cartCount;
+}
+
+  </script>
+</body>
+</html>
