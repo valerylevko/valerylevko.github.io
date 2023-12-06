@@ -1,0 +1,20 @@
+{"name":"Shop",
+  "products" : [
+    {
+      "name" : "Монітор 27 Dell S2721DGFA (210-AXRQ)",
+      "price":"16 999"
+    },
+    {
+      "name" : "Монітор 27 Samsung S8 S27A800U (LS27A800UNIXCI) 4K IPS",
+      "price":"14 449"
+    },
+    {
+      "name" : "Монітор 14 Lenovo ThinkVision M14t (62A3UAT1WL)",
+      "price":"15 355"
+    },
+    {
+      "name" : "Монітор 27 LG 27UP650-W Gray/Black",
+      "price":"15 599"
+    }
+  ]
+}
