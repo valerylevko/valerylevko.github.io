@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+    <body>
+    <input type="checkbox" value="html">html
+    <input type="checkbox" value="css">css
+    <input type="checkbox" value="js">js
+    <input type="checkbox" value="php">php
+    <p id="text"></p>
+      <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const text = document.getElementById('text');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                updateSelectedLanguages();
+            });
+        });
+        function updateSelectedLanguages() {
+            const selected = Array.from(checkboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+            text.textContent = selected.join(', ');
+        }
+    </script>
+    </body>
+    </html>
