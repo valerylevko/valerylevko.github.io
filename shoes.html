@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Головна</title>
+        <title>Магазин</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="in.css" rel="stylesheet">
+        <link href="sh.css" rel="stylesheet">
         <link href="main.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -42,11 +43,11 @@
             </nav>
             </div>
         </header>
-            <p class="way"><a class="gl">Головна</a></p> 
-            <div class="container">
-  <input placeholder='Search...' class='js-search' type="text">
-  <i id="sea" class="fa fa-search"></i>
-</div>
+             <p class="way"><a class="gl" href="index.html">Головна</a> > <a class="gl" href="shop.html">Магазин</a> > Взуття</p> 
+             <div class="container">
+    <input placeholder='Search...' class='js-search' type="text">
+    <i id="sea" class="fa fa-search"></i>
+  </div>
 <div class="kat">
     <form action="clothes.html">
       <button type="submit">Одяг</button>
@@ -64,39 +65,32 @@
       <button type="submit">Головні убори</button>
     </form>
 </div>
-          <div class="slider-container">
-    <div class="slider">
-        <div class="slide"><img src="im1.jpg" alt="Slide 1"></div>
-        <div class="slide"><img src="im2.jpg" alt="Slide 2"></div>
-        <div class="slide"><img src="im3.jpg" alt="Slide 3"></div>
+           <div class="cart-icon" onclick="openCartModal()">
+    <div id="cart">🛒</div>
+    <span id="cart-count">0</span>
+  </div>
+
+  <div id="modal">
+    <div id="modal-content"></div>
+  </div>
+ <div class="wrap">
+        <div class="product">
+          <img src="boots.png">
+          <h3>Тактичні Черевики Mil-Tec Combat II Generation Black </h3>
+          <span class="price4">1 200 грн</span>
+          <button id="button4" onclick="addToCart()">В корзину</button>
+</div>
     </div>
-    <button class="prev-btn" onclick="prevSlide()">‹</button>
-    <button class="next-btn" onclick="nextSlide()">›</button>
-</div>
-<div class="new">
-<div class="layout-cell-plugin layout-cell-plugin" id="f02k7">
-<div class="plugin-layout-inner">
-<p><strong>Висока якість</strong></p>
-<p class="n">Ми працюємо з виробниками, які дотримуються високих виробничих стандартів.</p>
-</div>
-</div>
 
-<div class="layout-cell-plugin layout-cell-plugin" id="pca0s">
-<div class="plugin-layout-inner">
-<p><strong>Зручність покупок</strong></p>
-<p class="n">Можливість замовляти товари з будь-якого місця і в будь-який час.</p>
-</div>
-</div>
-
-
-<div class="layout-cell-plugin layout-cell-plugin" id="g59hw">
-<div class="plugin-layout-inner">
-<p><strong>Експертні знання</strong></p>
-<p class="n">Ми експерти в цій справі та розуміємо потреби та вимоги професіоналів.</p>
-</div>
-</div>
-
-</div>
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCartModal()">&times;</span>
+      <p id="cart-empty-msg">Корзина пуста</p>
+      <div id="cart-items"></div>
+      <button onclick="goToCart()">Оформити замовлення</button>
+      <button onclick="closeCartModal()">Повернутись до покупок</button>
+    </div>
+  </div>
         <footer>
         <div id="contact">
              <div class="lo"><strong>
@@ -256,6 +250,20 @@
     <script src="script2.js"></script>
         <script src="script1.js"></script>
          <script src="script3.js"></script>
+         <script>
+             const searchInput = document.querySelector('.js-search');
+    const products = document.querySelectorAll('.product');
+
+    searchInput.addEventListener('input', function () {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      products.forEach(product => {
+        const productName = product.querySelector('h3').textContent.toLowerCase();
+        const isMatch = productName.includes(searchTerm);
+        product.style.display = isMatch ? 'block' : 'none';
+      });
+    });
+         </script>
     </body>
 
     </html>

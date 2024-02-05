@@ -1,0 +1,35 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+            #cap{
+                height: 45px;
+                max-width: 100%;
+                left: 0px;
+                top: 0px;
+                background: DarkOliveGreen;
+                color: white;
+            }
+            #cap, i{
+                font-size: 12px;
+            }
+            .pho, .mail{
+                display: none;
+            }
+            .prof{
+                padding-left: 25px;
+                padding-top: 15px;
+            }
+            @media(min-width: 1024px){
+                .pho, .mail{
+                    padding-top: 15px;
+                    display: inline-flex;
+                    padding-left: 25px;
+                }
+                .prof{
+                    position: relative;
+                    top: -25px;
+                    margin-left: 815px;
+                }
+            }
