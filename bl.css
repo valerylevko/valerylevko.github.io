@@ -59,11 +59,11 @@ margin: 0px 15px 15px 0px;
 
 }
 #contact{
-        margin-top: 295px;
+        margin-top: 325px;
 }
 @media(min-width: 300px){
     #contact{
-        margin-top: 315px;
+        margin-top: 325px;
     }
 }
     @media(min-width: 370px){
