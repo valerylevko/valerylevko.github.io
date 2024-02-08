@@ -59,16 +59,16 @@ margin: 0px 15px 15px 0px;
 
 }
 #contact{
-        margin-top: 285px;
+        margin-top: 295px;
 }
 @media(min-width: 300px){
     #contact{
-        margin-top: 305px;
+        margin-top: 315px;
     }
 }
     @media(min-width: 370px){
     #contact{
-        margin-top: 245px;
+        margin-top: 255px;
     }
 }
     @media(min-width: 630px){
@@ -78,7 +78,7 @@ margin: 0px 15px 15px 0px;
 }
 @media(min-width: 650px){
     #contact{
-        margin-top: 205px;
+        margin-top: 215px;
     }
 }
 @media(min-width: 710px){
