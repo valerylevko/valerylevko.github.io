@@ -61,30 +61,34 @@ margin: 0px 15px 15px 0px;
 #contact{
         margin-top: 250px;
 }
-
-    @media(min-width: 370px){
+@media(min-width: 300px){
     #contact{
-        margin-top: 205px;
+        margin-top: 275px;
     }
 }
-    @media(min-width: 630px){
+    @media(min-width: 370px){
     #contact{
         margin-top: 215px;
     }
 }
+    @media(min-width: 630px){
+    #contact{
+        margin-top: 225px;
+    }
+}
 @media(min-width: 650px){
     #contact{
-        margin-top: 165px;
+        margin-top: 175px;
     }
 }
 @media(min-width: 710px){
     #contact{
-        margin-top: 105px;
+        margin-top: 115px;
     }
 }
 @media(min-width: 780px){
     #contact{
-        margin-top: 75px;
+        margin-top: 85px;
     }
 }
 @media(min-width: 810px){
@@ -104,7 +108,7 @@ margin: 0px 15px 15px 0px;
 }
 @media(min-width: 1024px){
     #contact{
-        margin-top: 65px;
+        margin-top: 75px;
     }
 }
 
