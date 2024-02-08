@@ -68,32 +68,32 @@ margin: 0px 15px 15px 0px;
 }
     @media(min-width: 370px){
     #contact{
-        margin-top: 215px;
+        margin-top: 225px;
     }
 }
     @media(min-width: 630px){
     #contact{
-        margin-top: 225px;
+        margin-top: 235px;
     }
 }
 @media(min-width: 650px){
     #contact{
-        margin-top: 175px;
+        margin-top: 185px;
     }
 }
 @media(min-width: 710px){
     #contact{
-        margin-top: 95px;
+        margin-top: 125px;
     }
 }
 @media(min-width: 780px){
     #contact{
-        margin-top: 85px;
+        margin-top: 105px;
     }
 }
 @media(min-width: 810px){
     #contact{
-        margin-top: 45px;
+        margin-top: 55px;
     }
 }
 @media(min-width: 860px){
