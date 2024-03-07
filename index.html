@@ -19,8 +19,25 @@
                 <i class="fas fa-envelope"> valerylevko645@gmail.com</i>
                 </div>
                 <div class="prof">
+                    <button onclick="openModal()" class="but">
                 <i class= "fas fa-user"> Профіль</i>
+            </button>
                 </div>
+                <div id="myModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" style="float:right;">&times;</span>
+    <h2>Реєстрація</h2>
+    <form>
+      <label for="username">Ім'я:</label>
+      <input type="te" id="username" name="username"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <button type="submit">Зареєструватися</button>
+    </form>
+  </div>
+</div>
             </div>
                 <nav class="header-menu">
                     <div class="logo">
@@ -40,13 +57,8 @@
                     </ul>
                 </div>
             </nav>
-            </div>
         </header>
             <p class="way"><a class="gl">Головна</a></p> 
-            <div class="container">
-  <input placeholder='Search...' class='js-search' type="text">
-  <i id="sea" class="fa fa-search"></i>
-</div>
 <div class="kat">
     <form action="clothes.html">
       <button type="submit">Одяг</button>
@@ -66,9 +78,9 @@
 </div>
           <div class="slider-container">
     <div class="slider">
-        <div class="slide"><img src="im1.jpg" alt="Slide 1"></div>
-        <div class="slide"><img src="im2.jpg" alt="Slide 2"></div>
-        <div class="slide"><img src="im3.jpg" alt="Slide 3"></div>
+        <div class="slide"><img src="im1.jpg" alt="NoWar"></div>
+        <div class="slide"><img src="im2.jpg" alt="Comfort"></div>
+        <div class="slide"><img src="im3.jpg" alt="assortment"></div>
     </div>
     <button class="prev-btn" onclick="prevSlide()">‹</button>
     <button class="next-btn" onclick="nextSlide()">›</button>
@@ -201,23 +213,23 @@
         <nav class="menu-vertical">
             <ul list-style-type:  none;>
                     <li id="menu-item-shop" class="common has-no-submenu has-no-widget">
-                        <a class="m" href="index.html">
-                            Головна
+                        <a class="m" href="/shop/" target="_self">
+                            Магазин
                         </a>
                     </li>
                     <li id="menu-item-for-customers" class="common has-no-submenu has-no-widget">
-                        <a class="k" href="about.html">
+                        <a class="k" href="about.html" target="_self">
                             Про нас
                         </a>
                     </li>
                     <li id="menu-item-blog" class="common has-no-submenu has-no-widget">
-                        <a class="b" href="blog.html">
+                        <a class="b" href="blog.html" target="_self">
                             Блог
                         </a>
                     </li>
                     <li id="menu-item-contacts" class="common has-no-submenu has-no-widget">
-                        <a class="c" href="shop.html">
-                            Магазин
+                        <a class="c" href="/contacts/" target="_self">
+                            Контакти
                         </a>
                     </li>
             </ul>
@@ -256,6 +268,23 @@
     <script src="script2.js"></script>
         <script src="script1.js"></script>
          <script src="script3.js"></script>
+         <script>
+             function openModal() {
+  document.getElementById('myModal').style.display = 'block';
+}
+
+// Функція для закриття модального вікна
+function closeModal() {
+  document.getElementById('myModal').style.display = 'none';
+}
+
+// Закриття модального вікна при кліці на позачергову область
+window.onclick = function(event) {
+  if (event.target == document.getElementById('myModal')) {
+    document.getElementById('myModal').style.display = 'none';
+  }
+}
+         </script>
     </body>
 
     </html>
